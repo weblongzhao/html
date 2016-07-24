@@ -1,0 +1,43 @@
+﻿/*全局样式*/
+body{
+margin:0;padding:0;
+}
+#footer{
+    height:400px;
+    background: #515151;
+  width:1340px;
+}
+a{
+    color:white;
+    text-decoration: none;
+}
+dt{
+    color: white;
+    font: inherit bold 16px/30px '微软雅黑';
+    padding-left: 40px ;
+}
+dd{
+    color: #f4f4f4;
+    font-size: 14px;
+}
+dl{
+    display: inline-block;
+    height: 415px;
+    margin-left: 84px;
+    margin-top: 50px;
+}
+/*分样式*/
+.dl2{
+    width: 150px;
+}
+.dl3{
+    width: 200px;
+}
+.dl4{
+    width: 200px;
+}
+.dl5{
+
+}
+
+
