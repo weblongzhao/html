@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mancan</title>
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/scrollbar.css">
+    <link rel="stylesheet" href="css/macan.css">
+    <script src="js/jquery.FainPic.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/jquery.min.js" ></script>
+</head>
+<body>
+<h3><a href="index.html"><img width="80px" src="images/logo.jpg" alt="logo" title="logo"></a></h3>
+<div style="border-bottom: 2px solid #dfdfdf"></div>
+  <div class="nav">
+        <a href=""class="hvr-shutter-out-vertical">所有车型</a>
+        <span>|</span>
+        <div>
+            <a class="hvr-shutter-out-vertical" href="">保时捷认可易手车</a>
+            <a class="hvr-shutter-out-vertical" href="">赛车&amp;活动</a>
+            <a class="hvr-shutter-out-vertical" href="">个性化与服务</a>
+            <a class="hvr-shutter-out-vertical" href="">关于保时捷</a>
+        </div>
+    </div>
+<!--返回顶部-->
+<ul class="scroll">
+    <li class="sct"> <a href="#">&nbsp;&nbsp;&nbsp;</a>
+        <div><a class="scroll_t">返回顶部</a></div>
+    </li>
+    <li class="scb"> <a href="#">&nbsp;&nbsp;&nbsp;</a>
+        <div><a class="scroll_b">转到底部</a></div>
+    </li>
+</ul>
+
+
+<script type="text/javascript">
+    jQuery(document).ready(function($){
+        $('.scroll_t').click(function(){$('html,body').animate({scrollTop: '0px'}, 800);});
+        $('.scroll_b').click(function(){$('html,body').animate({scrollTop: document.body.clientHeight+'px'}, 800);});
+    });
+
+    $(document).ready(function(){
+        $("ul.scroll li").hover(function() {
+            $(this).find("div").stop()
+                    .animate({right: "0", opacity:1}, "fast")
+                    .css("display","block")
+        }, function() {
+            $(this).find("div").stop()
+                    .animate({right: "0", opacity: 0}, "fast")
+        });
+    });
+</script>
+<!--返回顶部结束-->
+ <!--图片区-->
+<div class="pic">
+<img src="images/Macan-image.jpg" alt="">
+ <h1>918 Spyder</h1>
+ <h3>Pure.Energy.</h3>
+</div>
+  <h2>技术数据</h2>
+   <div class="model"><img src="images/macan-model.png" alt="">
+       <div class="overtone"></div>
+    <table>
+
+        <tr>
+            <td>功率</td>
+            <td>185 kW (252 hp) / 5,000 - 6,800 rpm</td>
+        </tr>
+        <tr>
+            <td>0 - 100 km/h 加速时间</td>
+            <td>6.7s</td>
+        </tr>
+        <tr>
+            <td>最高时速</td>
+            <td>229km/h</td>
+        </tr>
+        <tr>
+            <td>耗油 混合(l/100 km)</td>
+            <td>7.9</td>
+        </tr>
+        <tr>
+            <td>郊区(l/100km)</td>
+            <td>7.2</td>
+        </tr>
+        <tr>
+            <td>价格</td>
+            <td>588,000元，含增值税</td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>

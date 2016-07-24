@@ -1,0 +1,19 @@
+.pic img{margin-top:10px;width: 1200px;}
+.pic  h1,h3{color: #FFFFFF;}
+.pic h1{position: absolute;top:500px ;left: 150px;}
+.pic h3{position: absolute;top:540px ;left: -450px;}
+table tr td {border-bottom: 1px solid red;padding-top: 5px;}
+.model table{width: 500px;margin-top: 60px;margin-right: 0;float: right;}
+.model{height: 500px;position: relative;}
+/*图像尺寸线*/
+.overtone{display: block;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin-right: 20px;
+    margin-left: 20px;
+    position: absolute;
+    top:1px;
+    left: 1px;
+    overflow: hidden;
+    height: 50px;
+    width: 1px;}

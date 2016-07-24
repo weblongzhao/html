@@ -1,0 +1,20 @@
+
+.yiz-slider-1 {height:461px;width:100%;float: left;position: relative; overflow: hidden;margin-top:10px;margin-left:0;}
+.yiz-slider-1 ul {margin: 0px;
+                    padding: 0px;
+                    float: left;
+                    height: 600px;
+                    width:1500px;
+                    list-style-type: none;
+                    display: block;
+                    position: absolute;
+                    top: 0;left:-300px;
+                    z-index: 98;
+                    overflow: hidden;
+}
+.yiz-slider-1 ul li {height:600px;width:1200px;float: right;padding: 0px;margin-left:0; overflow: hidden;z-index:1;}
+.yiz-slider-1 ul li img{max-width: 100%; width:1200px;z-index:1;}
+
+.yiz-page-btn {float: left;width: auto;height: 30px; position: absolute; bottom: 30px; right: 20px; z-index: 99}
+.yiz-page-btn span{height: 30px;width: 30px;background-color: #999;display: block;float: left;line-height: 30px;text-align: center;color: #FFF;margin-right: 10px;cursor:pointer; }
+.yiz-page-btn .current {background-color: #1D5D76;}
