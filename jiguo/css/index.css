@@ -1,0 +1,348 @@
+﻿/*公共样式*/
+body{
+    width: 1340px;
+}
+ul,li ,span{
+    display: inline-block;
+    list-style-type: none;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+    color:black;
+}
+li,ul,span{
+    margin: 0;padding: 0;
+}
+/*查看更多*/
+.readmore i{
+    background: url('../img/readMore.png') no-repeat;
+    padding-right:20px ;
+}
+.readmore{
+    float: right;
+    margin-right: 0;
+    margin-top: -50px;
+    padding-bottom: 4px;
+}
+/*<!--导航 nav-->*/
+.nav{
+    padding: 5px 160px;
+}
+.nav img{
+    width:150px ;
+}
+.nav .ul{
+    width:500px ;
+}
+.nav .ul a{
+    width:70px ;
+    height: 50px;
+    text-align:center;
+    line-height:50px;
+    font-size: 20px;
+}
+.nav .ul a:hover{
+    color:red;
+}
+.nav-a{
+    color: red;
+}
+
+.logBtn{
+    border: 1px solid red;
+    border-radius: 5px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+.logBtn a{
+    width:50px ;
+    height:40px;
+    line-height: 40px;
+    color: red;
+    text-align: center;
+}
+.logBtn a:hover{
+    background: red;
+    color: white;
+}
+.search{
+    width: 211px;
+    height: 58px;
+    line-height: -11px;
+    background: url("../img/search.png") no-repeat 131px center;
+    position: relative;
+}
+.search input{
+    width:0;
+    height: 34px;
+    position: absolute;
+    top: 11px;
+    right: 52px;
+    opacity: 0;
+}
+.nav img,.nav .ul,.nav .search,.nav .logBtn{
+    float: left;
+}
+.nav::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+/*广告区*/
+.banner{
+    height: 306px;
+    background: url('../img/banner.png') no-repeat;
+}
+.dec *{
+    color: white;
+    text-align: right;
+}
+.dec {
+   padding-top: 30px;
+padding-right: 110px;
+}
+.dec>p span{
+     border: 1px solid  #f4cf99;
+    border-radius: 2px;
+    background: rgba(244,207,153,.5);
+    padding: 8px 4px;
+    margin-left: 5px;
+}
+.dec p a{
+   width: 250px;
+    height:50px;
+    background: red;
+    font-size: 25px;
+    text-align: center;
+    line-height: 50px;
+}
+/*<!--主体 main-->*/
+  .main{
+
+  }
+/*<!--热门试用 轮播图-->
+  .hot{
+              padding: 0 180px;
+  }
+
+  .hot .wrap .description p{
+      text-align: center;
+  }
+  .hot .wrap li {
+      margin-left:20px;
+  }
+  .hot .wrap li:first-child{
+      margin-left:0 ;
+  }
+.hot .wrap .description p span{
+   border: 1px red solid;
+    border-radius: 5px;
+    width: 48px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+}
+.description h4 {
+    height: 44px;
+}
+*/
+/*<!--报告精选-->*/
+.report{
+    padding: 0 180px;
+    background: #f7f7f7;
+}
+.report .wrap ul{
+    overflow: hidden;
+}
+.report .wrap ul li img{
+    width:221px ;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+.report .wrap li{
+    float: left;
+    width: 221px;
+    margin-left: 20px;
+    background: white;
+}
+.report .wrap li:nth-child(4n-3){
+    margin-left: 0 ;
+}
+.report .wrap .decrition .infmaintion{
+    color: #d4d4d4;
+}
+.report .wrap .decrition .infmaintion span{
+    float: right;
+    margin-right: 2px;
+}
+.report .wrap .decrition .infmaintion span img{
+    width: 15px;
+    height: 15px;
+}
+
+/*<!--导购精选-->*/
+.guide{
+    padding: 0 180px;
+    background: #ffffff;
+}
+.guide .wrap ul{
+    overflow: hidden;
+}
+.guide .wrap ul li img{
+    width:221px ;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+.guide .wrap li{
+    float: left;
+    width: 221px;
+    margin-left: 20px;
+    background: white;
+}
+.guide .wrap li:nth-child(4n-3){
+    margin-left: 0 ;
+}
+.guide .wrap .decrition .infmaintion{
+    color: #d4d4d4;
+}
+.guide .wrap .decrition .infmaintion span{
+    float: right;
+    margin-right: 2px;
+}
+.guide .wrap .decrition .infmaintion span img{
+    width: 15px;
+    height: 15px;
+}
+
+/*<!--发现酷玩-->*/
+.coolplay{
+    padding: 0 180px;
+    background: #f7f7f7;
+}
+.coolplay .wrap ul{
+    overflow: hidden;
+}
+.coolplay .wrap ul li img{
+    width:221px ;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+.coolplay .wrap li{
+    float: left;
+    width: 221px;
+    margin-left: 20px;
+    background: white;
+}
+.coolplay .wrap li:nth-child(4n-3){
+    margin-left: 0 ;
+}
+.coolplay .wrap .decrition .infmaintion{
+    color: red;
+}
+.coolplay .wrap .decrition .infmaintion span{
+    float: right;
+    margin-right: 2px;
+}
+.coolplay .wrap .decrition .infmaintion span img{
+    width: 15px;
+    height: 15px;
+}
+/*<!--尾部-->*/
+
+/*焦点图样式*/
+.hot .wrap{
+    width: 955px;
+    overflow: hidden;
+}
+.main .hot{
+  overflow:hidden;
+    width: 800px;
+}
+.main .hot #out{
+
+    width:5282px ;
+    overflow:hidden;
+}
+.main .hot .wrap .con{
+float: left;
+}
+.hot{
+    padding: 0 180px;
+}
+
+.hot .wrap .description p{
+    text-align: center;
+}
+.hot .wrap .con {
+    margin-left:20px;
+}
+.hot .wrap .con:first-child{
+    margin-left:0 ;
+}
+.hot .wrap .description p span{
+    border: 1px red solid;
+    border-radius: 5px;
+    width: 48px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+}
+.description h4 {
+    height: 44px;
+}
+/**/
+.hot{
+    padding: 0 180px;
+    height: 348px;
+}
+
+.hot .wrap .description p{
+    text-align: center;
+}
+.hot .wrap .con {
+    margin-left:20px;
+}
+.hot .wrap .con:first-child{
+    margin-left:0 ;
+}
+.hot .wrap .description p span{
+    border: 1px red solid;
+    border-radius: 5px;
+    width: 48px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+}
+.description h4 {
+    height: 44px;
+}
+#out img{width: 221px;height: 132px;}
+/*轮播图按钮*/
+.left {
+    width: 37px;
+    height: 78px;
+    background: url(../img/prev.png) 0 0 no-repeat;
+    position: absolute;
+    left: 110px;
+    top: 500px;
+    cursor: pointer;
+}
+
+.right {
+    width: 37px;
+    height: 78px;
+    background:url(../img/next.png) 0 0 no-repeat;
+    position:absolute;
+    right:110px;
+    top: 500px;
+    cursor:pointer;
+}
+/*返回顶部*/
+#btn{
+    display: none;
+ position: fixed;
+    bottom: 0;
+    right:10px;
+}
