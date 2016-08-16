@@ -8,7 +8,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--bootstrap样式文件-->
     <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <script src="js/jquery.min.js"></script>  <!--jquery版本为2.1.4-->
+    <!--<script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>  &lt;!&ndash;jquery版本为2.1.4&ndash;&gt;-->
+    <!--自定义脚本文件-->
+    <script>
+        function fn(json){
+            console.log(json) ;
+            var songId=json.song[0].songid ;
+            console.log(songId) ;
+
+            var html = "" ;
+            for(var i =0 ;i<6;i++){
+                var songName =json.song[i].songname;
+                var artistName =json.song[i].artistname ;
+                var artistpic = json.album[i].artistpic ;
+                html+="<a class='pull-left' href=''><img src='"+artistpic+"' alt='专辑图片'></a><div class='media-body'><h4 class='media-heading'>"+songName+"</h4><p>"+artistName+"</p></div>";
+                document.getElementById("media-list").innerHTML=" <li class='media'>"+html+"</li>" ;
+            }
+        }
+        window.onload=function () {
+            var oBtn= document.getElementById("btnGo");
+            var oSearch =document.getElementById("search");
+            var oMsg = document.getElementById('msg');
+            oBtn.onclick=function(){
+                if(oSearch.value !=""){
+                    var oScript = document.createElement("script");
+                    oScript.src ='http://tingapi.ting.baidu.com/v1/restserver/ting?format=json&callback=fn&from=webapp_music&method=baidu.ting.search.catalogSug&query='+oSearch.value;
+                    document.body.appendChild(oScript) ;
+                }
+            }}
+
+    </script>
+
     <!--自定义样式-->
     <style>
         body{
@@ -28,85 +58,27 @@
             </span>
     </div>
 </header>
-    <div>
-        <ul class="media-list">
-            <!--一个图文描述信息-->
-            <!--<li class="media">
-                <a class="pull-left" href="">
-                    <img src="https://weblongzhao.github.io/images/juhuasuan.jpg" alt="">
-                </a>
-                <div class="media-body">
-                    <h4 class="media-heading">头信息</h4>
-                    <p>图片描述信息</p>
-                </div>
-            </li>-->
+<div>
+    <ul class="media-list" id="media-list">
+        <!--一个图文描述信息-->
+        <!--<li class="media">
+            <a class="pull-left" href="">
+                <img src="https://weblongzhao.github.io/images/juhuasuan.jpg" alt="">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">头信息</h4>
+                <p>图片描述信息</p>
+            </div>
+        </li>-->
 
 
-        </ul>
-    </div>
+    </ul>
+</div>
 
 <footer class="navbar-fixed-bottom text-center">
     &copy;2015  <span class="glyphicon glyphicon-copyright-mark"></span>
 </footer>
 
-<!--自定义脚本文件-->
-    <script>
-    window.onload=function () {
-        var oBtn= document.getElementById("btnGo");
-        var oSearch =document.getElementById("search");
-        var oMsg = document.getElementById('msg');
-        oBtn.onclick=function(){
-            if(oSearch.value !=""){
-                /* var oScript = document.createElement("script");
-                 oScript.src ='http://tingapi.ting.baidu.com/v1/restserver/ting?format=json&calback=&from=webapp_music&method=baidu.ting.search.catalogSug&query='+oSearch.value;*/
-//                    alert(oSearch.value)
-                var url ='http://tingapi.ting.baidu.com/v1/restserver/ting?format=json&calback=&from=webapp_music&method=baidu.ting.search.catalogSug&query='+oSearch.value;
-                /*    var playUrl = 'http://tingapi.ting.baidu.com/v1/restserver/ting?format=json&calback=&from=webapp_music&method=baidu.ting.song.playAAC&songid='+songId ;*/
-//                调用百度音乐API 接口
-                $.ajax({
-                    type: "get",
-                    cache:true,
-                    jsonp:'callback',
-                    url:url,
-                    crossDomain:'true',
-                    dataType: "jsonp",
-                    success: function(json){
-                        console.log(json) ;
-                        var songId=json.song[0].songid ;
-                        console.log(songId) ;
-                        var playUrl = 'http://tingapi.ting.baidu.com/v1/restserver/ting?format=json&calback=&from=webapp_music&method=baidu.ting.song.playAAC&songid='+songId ;
-                        var html = "" ;
-                        for(var i =0 ;i<6;i++){
-                            var songName =json.song[i].songname;
-                            var artistName =json.song[i].artistname ;
-                            var artistpic = json.album[i].artistpic ;
-                             html+="<a class='pull-left' href=''><img src='"+artistpic+"' alt='专辑图片'></a><div class='media-body'><h4 class='media-heading'>"+songName+"</h4><p>"+artistName+"</p></div>";
-                            $(".media-list").html(" <li class='media'>"+html+"</li>");
-                        }
-
-
-                        /*//                            请求播放地址
-                         $.ajax({
-                         type: "get",
-                         cache:true,
-                         jsonp:'callback',
-                         url:playUrl,
-                         crossDomain:'true',
-                         dataType: "jsonp",
-                         success:function(data){
-                         console.log(data)
-                         }
-                         });
-                         //                            结束*/
-                    },
-                    error: function(){
-                        alert('fail');
-                    }
-                });
-            }
-        }}
-
-</script>
 
 </body>
 </html>
